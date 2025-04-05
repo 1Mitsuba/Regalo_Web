@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Rincón Especial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-heart"></i>
+            <span>Nuestro Amor</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li class="hidden-content"><a href="#historias">Nuestras Historias</a></li>
+            <li class="hidden-content"><a href="#fotos">Nuestras Fotos</a></li>
+            <li class="hidden-content"><a href="#momentos">Momentos Especiales</a></li>
+            <li class="hidden-content"><a href="#mensaje">Mensaje Especial</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="login-btn" id="loginBtn">
+                <i class="fas fa-user"></i> <span id="loginText">Ingresar</span>
+            </div>
+            <div class="logout-btn" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> <span>Salir</span>
+            </div>
+        </div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    
+    <!-- Modal de Login -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Hola mi amor</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">¿Cuál es tu nombre especial?</label>
+                    <input type="text" id="username" placeholder="Ingresa tu apodo especial">
+                </div>
+                <div class="form-group">
+                    <label for="password">¿Qué día es el mas especial? (DD/MM/AAAA)</label>
+                    <input type="password" id="password" placeholder="Fecha especial">
+                </div>
+                <button type="submit" class="login-submit">Entrar a nuestro mundo</button>
+                <p class="login-info">Pista: usa tu apodo especial y nuestra fecha</p>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Header / Banner para todos -->
+    <header id="inicio" class="banner">
+        <div class="banner-content">
+            <h1>Para la persona que ilumina mi vida</h1>
+            <p>He creado este espacio especial solo para nosotros</p>
+            <button class="cta-btn" id="ctaBtn">Descubre nuestro mundo</button>
+        </div>
+        <div class="floating-hearts"></div>
+    </header>
+    
+    <!-- Mensaje de login requerido (visible solo cuando no está logueado) -->
+    <div id="loginRequired" class="login-required">
+        <div class="login-required-content">
+            <i class="fas fa-lock"></i>
+            <h2>Tengo algo especial para ti</h2>
+            <p>He preparado poemas, fotos y mensajes que solo tú puedes ver.</p>
+            <p class="hint">Usa nuestra clave especial para descubrirlo...</p>
+            <button id="loginRequiredBtn" class="login-required-btn">Ingresar</button>
+        </div>
+    </div>
+    
+    <!-- Contenido que solo se muestra cuando está logueado -->
+    <div id="hiddenContent" class="hidden-container">
+        
+        <!-- Sección Historias -->
+        <section id="historias" class="section">
+            <h2 class="section-title">Nuestras Historias</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img11.jpg" alt="Nuestra foto #1" class="card-image">
+                        <div class="img-caption">Nuestro primer encuentro</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nuestra Foto</h3>
+                        <p>Nosotros caminando por ahi la verdad no me acuerdo 
+                            dodne y cuando fue esa foto pero jaja somos felices.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img23.jpg" alt="Nuestra foto #2" class="card-image">
+                        <div class="img-caption">Nuestro viaje a...</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nuestro viaje Cocha y Aiquile</h3>
+                        <p>Viajamos juntos dos ves bueno tres con esta ultima 
+                            la primera fue en flota a cocha y ayudamos a vender jaja
+                            la segunda fue a Aiquile y fue en micro y la tercera
+                            fue a Aiquile pero esta ves en auto y muy de repente 
+                            sin pensarlo antes jajaj.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img30.jpg" alt="Nuestra foto #3" class="card-image">
+                        <div class="img-caption">Nuestra celebración</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nuestra celebración</h3>
+                        <p>Casi Navidad la celebramos antes que todos jaja</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Poemas o Palabras Especiales -->
+        <section id="mensaje" class="section poemas-section">
+            <h2 class="section-title">Palabras del Corazón</h2>
+            <div class="poema-container">
+                <div class="poema active">
+                    <h3>Código de Amor</h3>
+                    <p class="poema-texto">
+                        while(estemos_juntos) {<br>
+                            amor++;<br>
+                            distancia--;<br>
+                        }<br>
+                        Eres el único bug que nunca querré corregir,<br>
+                        el commit perfecto en el repo de mi corazón.
+                    </p>
+                    <div class="poema-autor">- Tu developer favorito</div>
+                </div>
+                <div class="poema">
+                    <h3>Constelación</h3>
+                    <p class="poema-texto">
+                        En tus ojos descubrí galaxias enteras,<br>
+                        en tu sonrisa, universos inexplorados.<br>
+                        El tiempo se detiene cuando estamos juntos,<br>
+                        como si el mundo conspirara para darnos eternidad.
+                    </p>
+                    <div class="poema-autor">- Tuyo por siempre</div>
+                </div>
+                <div class="poema">
+                    <h3>Algoritmo Perfecto</h3>
+                    <p class="poema-texto">
+                        Antes de ti, mi vida era binaria,<br>
+                        unos y ceros sin propósito ni sentido.<br>
+                        Llegaste para compilar mi código incompleto,<br>
+                        y hacer funcionar el programa de mi felicidad.
+                    </p>
+                    <div class="poema-autor">- Tu compañero de vida</div>
+                </div>
+                <div class="poema">
+                    <h3>Cada Día</h3>
+                    <p class="poema-texto">
+                        Cada día contigo es un nuevo verso<br>
+                        en el poema que escribimos juntos.<br>
+                        Tus risas iluminan mis mañanas,<br>
+                        tus abrazos son el hogar donde descansa mi alma.
+                    </p>
+                    <div class="poema-autor">- Con amor eterno</div>
+                </div>
+                <div class="poema">
+                    <h3>if (teAmo)</h3>
+                    <p class="poema-texto">
+                        if (teAmo == true) {<br>
+                            // Este sentimiento nunca cambiará<br>
+                            return "para siempre";<br>
+                        }<br>
+                        // Spoiler: teAmo siempre será verdadero
+                    </p>
+                    <div class="poema-autor">- Programado para amarte</div>
+                </div>
+                <div class="poema">
+                    <h3>Suspiro Digital</h3>
+                    <p class="poema-texto">
+                        Eres mi variable constante,<br>
+                        mi función favorita,<br>
+                        la excepción a todas mis reglas.<br>
+                        No hay firewall que detenga<br>
+                        lo que siento cada vez que sonríes.
+                    </p>
+                    <div class="poema-autor">- 404: Palabras no encontradas</div>
+                </div>
+                
+                <div class="poema">
+                    <h3>Mapa Estelar</h3>
+                    <p class="poema-texto">
+                        Si cada estrella fuera un "te quiero",<br>
+                        aún necesitaría galaxias enteras<br>
+                        para expresar lo que siento por ti.<br>
+                        Eres mi norte, mi constelación favorita,<br>
+                        el astro que ilumina mi universo.
+                    </p>
+                    <div class="poema-autor">- Tu navegante</div>
+                </div>
+                
+                <div class="poema">
+                    <h3>La Mejor Función</h3>
+                    <p class="poema-texto">
+                        function amarteEsFacil() {<br>
+                        let motivos = ["tu sonrisa", "tu mirada", "tu alma"];<br>
+                        for (let siempre of motivos) {<br>
+                            console.log("Te amo por " + siempre);<br>
+                        }
+                    </p>
+                    <div class="poema-autor">- Error: Demasiadas razones para amar</div>
+                </div>
+                
+                <div class="poema">
+                    <h3>Promesa</h3>
+                    <p class="poema-texto">
+                        No prometo días perfectos,<br>
+                        pero sí momentos inolvidables.<br>
+                        No prometo no equivocarme,<br>
+                        pero sí aprender juntos el camino.<br>
+                        Solo prometo amarte, hoy y siempre.
+                    </p>
+                    <div class="poema-autor">- Con mi corazón en tus manos</div>
+                </div>
+                
+                <div class="poema">
+                    <h3>Latido Sincronizado</h3>
+                    <p class="poema-texto">
+                        Tu corazón y el mío<br>
+                        están sincronizados en el mismo latido,<br>
+                        como dos sistemas perfectamente integrados,<br>
+                        funcionando en armonía,<br>
+                        creando la sinfonía de nuestra historia.
+                    </p>
+                    <div class="poema-autor">- Tu puerto seguro</div>
+                </div>
+            </div>
+            <div class="poema-controls">
+                <button id="prevPoema"><i class="fas fa-chevron-left"></i></button>
+                <button id="nextPoema"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <!-- Sección Galería de Fotos -->
+        <section id="fotos" class="section">
+            <h2 class="section-title">Nuestra Galería</h2>
+            <div class="gallery">
+                <!-- Sustituye los placeholders con imágenes reales -->
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img10.jpg" alt="Foto 1" class="gallery-image">
+                    <div class="gallery-caption">Foto 1</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img11.jpg" alt="Foto 2" class="gallery-image">
+                    <div class="gallery-caption">Foto 2</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img12.jpg" alt="Foto 3" class="gallery-image">
+                    <div class="gallery-caption">Foto 3</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img13.jpg" alt="Foto 4" class="gallery-image">
+                    <div class="gallery-caption">Foto 4</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img14.jpg" alt="Foto 5" class="gallery-image">
+                    <div class="gallery-caption">Foto 5</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img15.jpg" alt="Foto 6" class="gallery-image">
+                    <div class="gallery-caption">Foto 6</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img16.jpg" alt="Foto 7" class="gallery-image">
+                    <div class="gallery-caption">Foto 7</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img18.jpg" alt="Foto 8" class="gallery-image">
+                    <div class="gallery-caption">Foto 8</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img19.jpg" alt="Foto 9" class="gallery-image">
+                    <div class="gallery-caption">Foto 9</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img2.jpg" alt="Foto 10" class="gallery-image">
+                    <div class="gallery-caption">Foto 10</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img20.jpg" alt="Foto 11" class="gallery-image">
+                    <div class="gallery-caption">Foto 11</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img21.jpg" alt="Foto 12" class="gallery-image">
+                    <div class="gallery-caption">Foto 12</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img22.jpg" alt="Foto 13" class="gallery-image">
+                    <div class="gallery-caption">Foto 13</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img23.jpg" alt="Foto 14" class="gallery-image">
+                    <div class="gallery-caption">Foto 14</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img26.jpg" alt="Foto 15" class="gallery-image">
+                    <div class="gallery-caption">Foto 15</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img27.jpg" alt="Foto 16" class="gallery-image">
+                    <div class="gallery-caption">Foto 16</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img28.jpg" alt="Foto 17" class="gallery-image">
+                    <div class="gallery-caption">Foto 17</div>
+                </div>
+                <div class="gallery-item" onclick="expandImage(this)">
+                    <img src="imagenes/img3.jpg" alt="Foto 18" class="gallery-image">
+                    <div class="gallery-caption">Foto 18</div>
+                </div>
+            </div>
+            <div id="imageModal" class="image-modal">
+                <span class="close-img">&times;</span>
+                <img class="modal-img-content" id="expandedImg">
+            </div>
+        </section>
+        
+        <!-- Sección Momentos Especiales (Diseño tipo álbum de recuerdos) -->
+        <section id="momentos" class="section timeline-section">
+            <h2 class="section-title">Nuestros Momentos Especiales</h2>
+            <div class="memory-album">
+                <div class="memory-card">
+                    <div class="memory-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img40.jpg" alt="Cuando nos conocimos" class="memory-image">
+                    </div>
+                    <div class="memory-date">Mayo 2024</div>
+                    <div class="memory-content">
+                        <h3>Cuando nos conocimos</h3>
+                        <p>No hay foto por que nos conocimos en la U jaja 
+                            al igual que cuando comensamos a hablar fue en una salida jaja.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img38.jpg" alt="Nuestra primera cita" class="memory-image">
+                    </div>
+                    <div class="memory-date">Mayo 2024</div>
+                    <div class="memory-content">
+                        <h3>Nuestra primera cita</h3>
+                        <p>De la primera cita no tenemos fotos asi que una del 
+                            moemnto mas especial.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img35.jpg" alt="Nuestro primer viaje" class="memory-image">
+                    </div>
+                    <div class="memory-date">Marzo 2024</div>
+                    <div class="memory-content">
+                        <h3>Nuestro primer viaje</h3>
+                        <p>Tampoco hay foto pipipi pero fue un viaje a 
+                            cocha nuestro primer viaje juntos.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img30.jpg" alt="Nuestro primer viaje" class="memory-image">
+                    </div>
+                    <div class="memory-date">Abril 2024</div>
+                    <div class="memory-content">
+                        <h3>Segundo primer viaje</h3>
+                        <p>No hay foto pipipi pero fue un viaje a 
+                            Aiquile y fuimos en micro jaja bebe tuvo que ir 
+                            ahi y los pasases son un robo jajaja.</p>
+                    </div>
+                </div>
+
+                <div class="memory-card">
+                    <div class="memory-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img15.jpg" alt="Nuestra primera Navidad" class="memory-image">
+                    </div>
+                    <div class="memory-date">Diciembre 2024</div>
+                    <div class="memory-content">
+                        <h3>Nuestra primera Navidad</h3>
+                        <p>Nuestra casi PRimera navidad por que ya era diciembre 
+                            pero no navidad ademas ya avian las luces de navidad.</p>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-img">
+                        <!-- Imagen real en lugar del placeholder -->
+                        <img src="imagenes/img23.jpg" alt="¡Hoy!" class="memory-image">
+                    </div>
+                    <div class="memory-date">Abril 2025</div>
+                    <div class="memory-content">
+                        <h3>¡Hoy!</h3>
+                        <p>¡Te estoy dando este regalo digital para expresar cuánto 
+                            significa para mí nuestra relación
+                            eres mi lugar seguro y lo mejor que me paso en la vida TE AMO BEBE!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mensaje Final Especial -->
+        <section class="section special-message">
+            <div class="message-container">
+                <h2>Mi Promesa Para Ti</h2>
+                <p>
+                    Yo prometo quererte mucho y darte mucho amor y mimos sabes que eres importante para mi 
+                    y no quiero que esto sea pasajero de verdad te kiero mucho.
+                    <br><br>
+                    Se que cometi errores algunos mucho mas feos que otros pero 
+                    lo que no quiero que dudes es que deverdad te amo mucho 
+                    eres la personita que me alegra la vida.
+                    <br><br>
+                    Con todo mi amor,
+                    <br>
+                    <span class="signature">YO BEBE
+                        <br/>
+                        <span class="signature-date">Abril 2025</span>
+                        <div class="heart-animation">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <br/>
+                    </span>
+                </p>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-message">
+                <p>Creado con <br/> <i class="fas fa-heart"></i> para ti</p>
+                <p class="date">Abril 2025</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
